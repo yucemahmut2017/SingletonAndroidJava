@@ -14,9 +14,9 @@ public class SecondActivity extends AppCompatActivity {
 
 
         ImageView imageView=findViewById( R.id.imageView);
-      //  Singleton singleton=Singleton.getInstance();
+    Singleton singleton=Singleton.getInstance();
 
-        //imageView.setImageBitmap( singleton.getChosenImage() );
+       imageView.setImageBitmap( singleton.getChosenImage() );
 
 
     }

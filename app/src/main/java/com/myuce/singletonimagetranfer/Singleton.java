@@ -5,7 +5,7 @@ import android.graphics.Bitmap;
 class Singleton {
 
     private Bitmap chosenImage;
-   // private static Singleton instance;
+  private static Singleton instance;
 
     public Singleton(){
 
@@ -20,10 +20,10 @@ class Singleton {
     public Bitmap getChosenImage(){
         return chosenImage;
     }
-/*    public static  Singleton getInstance(){
+   public static  Singleton getInstance(){
         if (instance != null) {
             instance=new Singleton();
         }
         return instance;
-    }*/
+    }
 }
