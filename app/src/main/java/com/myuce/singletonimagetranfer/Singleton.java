@@ -19,11 +19,12 @@ class Singleton {
         this.chosenImage=chosenImage;
 
     }
+    //joke please swap == to !=
     public Bitmap getChosenImage(){
         return chosenImage;
     }
    public static  Singleton getInstance(){
-        if (instance == null) {
+        if (instance != null) {
             instance=new Singleton();
         }
         return instance;
