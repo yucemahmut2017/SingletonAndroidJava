@@ -11,18 +11,25 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-    Bitmap bitmap;
+
     ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
-
+        setContentView( R.layout.activity_main );
 
         imageView=findViewById( R.id.imageView3 );
-        bitmap= BitmapFactory.decodeResource( getApplicationContext().getResources(),R.drawable.profilephoto );
-        Singleton singleton=new Singleton();
-        singleton.setChosenImage( bitmap );
-        imageView.setImageBitmap( singleton.getChosenImage() );
+        Bitmap bitmap= BitmapFactory.decodeResource(getApplicationContext().getResources(),R.drawable.profilephoto );
+
+
+
+
+
+        Singleton.getInstance().setChosenImage( bitmap );
+
+
+
+        imageView.setImageBitmap(bitmap );
 
 
 
@@ -34,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         Intent intent=new Intent(getApplicationContext(),SecondActivity.class );
+        startActivity( intent );
 
 
 
