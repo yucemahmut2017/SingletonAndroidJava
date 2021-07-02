@@ -7,6 +7,9 @@ class Singleton {
 
     private Bitmap chosenImage;
 
+    private int aa;
+    private  String bb;
+
     private static Singleton instance;
 
     public Singleton(){
